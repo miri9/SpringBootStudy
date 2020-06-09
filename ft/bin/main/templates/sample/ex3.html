@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>ex3 page</h1>
+
+    <p> [ 루프 돌리기 ] </p>
+        <ul> <!-- dtoList : model 에 들어갔을 때 이름-->
+            <#list dtoList as dto>
+                <li>\
+                    <p>COUNTER(1): ${dto?counter}</p>
+                    <p>INDEX(0): ${dto?index}</p>
+                    <p>EVEN OR ODD: ${(dto.sno % 2 == 0)?then ('짝','홀')}</p>
+                    <p>SNO: ${dto.sno}</p>
+                </li>
+            </#list>
+        </ul>
+</body>
+</html>

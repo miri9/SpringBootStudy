@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>ex2 page</h1>
+    <ul>
+        <!-- ?  일종의 . 표시 -->
+        <li>?cap_first 적용 : ${dto.title?cap_first}</li>
+        <li>${dto.writer}</li>
+    </ul>
+    <hr>
+    <ul>
+        <li> dto.sno == 10 이면 .big 을 붙인다.
+        <p <#if dto.sno==10>class='big'</#if> >SHOW</p>
+        </li>
+
+        <li> 루프 돌리기
+            <p></p>
+        </li>
+    </ul>
+</body>
+</html>
