@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- jsp 로 할 때에는 태그 안에 내용을 넣었지만, 타임리프는 태그 안에 value 를 넣는다.
+         => 서버가 동작하지 않아도 html 디자인이 깨지지 않게끔 ... .
+
+         현재 msg = Hello World
+    -->
+    <h1 th:value="${msg}">Server Massage. check my value!</h1>
+    <h1 th:text="${msg}">Server Massage</h1>
+    <hr>
+
+    <!-- 삼항연산자이자 if-else 역할 담당.-->
+    <h1 th:text="${msg2}?'YES':'NO'">RESULT</h1>
+    <h1 th:text="${msg3}?'YES':'NO'">RESULT</h1>
+
+    <hr>
+
+    <!-- 연산 -->
+    <h1 th:text="${sum+100}">SUM</h1>
+    <hr>
+
+    
+</body>
+</html>

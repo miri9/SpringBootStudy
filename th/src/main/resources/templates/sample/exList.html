@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <!-- state : 인덱스, 홀짝 등 처리 가능-->
+        <!-- 변수명 : ${서버쪽에서 넘긴 이름}-->
+        <li th:each=" dto,state: ${dtoList}"> 
+            <div th:object=${dto}>
+                <!--<p>[[${state.index}]] -- [[*{sno}]]</p>-->
+                <p>[[${state.odd}]] -- [[*{sno}]]</p>
+                <p>[[*{title}]]</p>
+                <p>[[*{writer}]]</p>
+                <p>[[*{regdate}]]</p>
+
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

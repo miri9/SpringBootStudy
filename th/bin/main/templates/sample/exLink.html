@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <!-- 변수명 : ${서버쪽에서 넘긴 이름}-->
+        <li th:each=" dto,state: ${dtoList}"> 
+            <div th:object=${dto}>
+                <!--<p><a th:href="@{'/sample/view'}">[[*{sno}]]</a></p>-->
+                <!-- 링크 + 파라미터 전달 : (키=값) -->
+                <p><a th:href="@{/sample/view(sno=*{sno},type='t',keyword='한글')}">[[*{sno}]]</a></p>
+                <!-- 주소 중간에 파라미터 들어가는 경우 : view/1 이렇게.-->
+                <p><a th:href="@{/sample/view/{sno}(sno=*{sno})}">[[*{sno}]]</a></p>
+                <p>[[*{title}]]</p>
+                <p>[[*{writer}]]</p>
+                <p>[[*{regdate}]]</p>
+
+                <!-- extra 라이브러리로 시간 변환 #temporals.format 함수 -->
+                <p>[[ ${ #temporals.format(dto.regdate) } ]]</p>
+                <p>[[ ${ #temporals.format(dto.regdate,"yyyy-MM-dd") } ]]</p>
+
+
+                
+
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

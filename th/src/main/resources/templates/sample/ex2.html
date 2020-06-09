@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 객체 다루기 -->
+    <div>
+        <h2 th:text="${dto.title}">TITLE</h2>
+    </div>
+
+    <div th:object="${dto}">
+        <h2 th:text="*{title}">TITLE</h2>
+    </div>
+
+    <!-- 태그가 없다면 출력 NO? => 인라인 스크립팅 기법 : 자바문법 및 자바객체 변환 가능.-->
+    <!-- 프리마커와 다름 : # = 빌트인 오브젝트. LocalDateTime 등 변환 가능.
+          프리마커가 변환하려면 따로 자바 설정 필요-->
+</body>
+</html>
