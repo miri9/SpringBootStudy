@@ -2,9 +2,9 @@
 examples for studying Spring boot, etc
 
 - day1_1 : jpa
-- ft : jpql Äõ¸®¸Ş¼­µå. Äõ¸® ¾Ö³ÊÅ×ÀÌ¼Ç. freemarker template
+- ft : freemarker template
 
-- dsl : queryDSL - °Ë»öÁ¶°Ç°ú µ¿ÀûÄõ¸®
-  th : ·¹ÀÌ¾Æ¿ô ³ª´©±â with thymeleaf template
+- dsl : queryDSL - ê²€ìƒ‰ì¡°ê±´ê³¼ ë™ì ì¿¼ë¦¬
+  th : ë ˆì´ì•„ì›ƒ ë‚˜ëˆ„ê¸° with thymeleaf template
 
-- sboard : SingleBoard °³½Ã. jpa ¿Í @query ÄÚµå ºñ±³
+- sboard : SingleBoard ê°œì‹œ. jpa ì™€ @query ì½”ë“œ ë¹„êµ
