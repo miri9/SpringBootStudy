@@ -49,4 +49,8 @@ public class ReBoard {
     // mappedBy 가 기술되는 건 OneToMany 쪽이다.
     @OneToMany(mappedBy = "board",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<AttachFile> files;
+
+    @OneToMany(mappedBy = "board", fetch = FetchType.LAZY, 
+    cascade = CascadeType.ALL)
+    private Set<Reply> replies;
 }
